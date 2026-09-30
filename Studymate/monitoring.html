@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/monitoring.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,8 +27,45 @@
 <!-- header tutup -->
 
 <main class="content-area">
-   
-    <h3>Isi Bagian ini</h3>
+    <!-- ==============================
+         KONTEN UTAMA
+         ============================== -->
+    <main class="container">
+      <!-- Peringatan deadline dekat -->
+      <div id="deadlineAlert" class="deadline-alert hidden">
+        ⚠️ <strong>Perhatian!</strong>
+        Ada tugas yang deadline-nya sudah dekat.
+      </div>
+
+      <!-- Informasi jumlah tugas -->
+      <div class="monitoring-info">
+        <h2>Tugas Belum Selesai</h2>
+        <span id="taskCount">0 tugas</span>
+      </div>
+
+      <!-- ==============================
+             DAFTAR TUGAS
+             Data akan dimasukkan melalui JavaScript
+             ============================== -->
+      <section id="taskList" class="task-list">
+        <!-- Contoh:
+            <div class="task-card">
+                ...
+            </div>
+            -->
+      </section>
+
+      <!-- Pesan ketika tidak ada tugas -->
+      <div id="emptyMessage" class="empty-message hidden">
+        <div class="empty-icon">🎉</div>
+        <h3>Semua tugas sudah selesai!</h3>
+        <p>Tidak ada tugas yang perlu dimonitor saat ini.</p>
+      </div>
+    </main>
+
+    <!-- Menghubungkan JavaScript halaman Monitoring -->
+    <script src="monitoring.js"></script>
+
 
 </main>
 
@@ -37,6 +74,6 @@
     @withkelompoktiga.entertainment
 </footer>
 <!-- footer tutup -->
-     <script src="js/script.js"></script>
+     <script src="js/monitoring.js"></script>
 </body>
 </html>
